@@ -6,7 +6,7 @@ ENV LARAVEL_VERSION="5.4.*" LARAVEL_HOME=/var/www/html
 
 RUN set -xe \
     && composer create-project --prefer-dist "laravel/laravel=${LARAVEL_VERSION}" $LARAVEL_HOME \
-    && chown -R app:app $LARAVEL_HOME
+    && chown -R www:www $LARAVEL_HOME
 
 WORKDIR $LARAVEL_HOME
 
