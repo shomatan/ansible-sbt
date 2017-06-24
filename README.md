@@ -1,3 +1,3 @@
 # Docker: Laravel
 
-Laravel based on PHP-FPM
+Laravel on PHP-FPM
