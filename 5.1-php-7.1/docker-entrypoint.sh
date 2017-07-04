@@ -18,6 +18,8 @@ LARAVEL_DB_PASSWORD=${LARAVEL_DB_PASSWORD:-"laravel"}
 
 echo "** Preparing Laravel app"
 
+cp -r /home/www/app/* .
+
 cat > .env <<EOF
 APP_ENV=${LARAVEL_APP_ENV}
 APP_DEBUG=${LARAVEL_APP_DEBUG}
@@ -51,7 +53,7 @@ done
 echo "** Database seeding"
 php artisan db:seed --force
  
-chmod 777 -R storage
+chown -R www:www $LARAVEL_HOME
 
 echo "########################################################"
  
