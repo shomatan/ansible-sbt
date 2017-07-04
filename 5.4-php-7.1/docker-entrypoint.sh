@@ -1,10 +1,19 @@
+#!/bin/sh
+#
+# -----------------------------------------------------------------------------
 set +e
 
+# Default Laravel environment
 LARAVEL_APP_ENV=${LARAVEL_APP_ENV:-"local"}
+# Default Laravel debug mode
 LARAVEL_APP_DEBUG=${LARAVEL_APP_DEBUG:-"true"}
+# Default Database host
 LARAVEL_DB_HOST=${LARAVEL_DB_HOST:-"db"}
+# Default Database name
 LARAVEL_DB_DATABASE=${LARAVEL_DB_DATABASE:-"laravel"}
+# Default Database user name
 LARAVEL_DB_USERNAME=${LARAVEL_DB_USERNAME:-"laravel"}
+# Default Database user password
 LARAVEL_DB_PASSWORD=${LARAVEL_DB_PASSWORD:-"laravel"}
 
 echo "** Preparing Laravel app"
